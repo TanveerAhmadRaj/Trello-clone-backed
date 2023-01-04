@@ -13,7 +13,7 @@ const router = require("./routes/userRouter.js");
 app.use("/users", router);
 //================ testing ===================================
 app.get("/", (req, res) => {
-  res.json({ meaasage: "Hello Server" });
+  res.json({ meaasage: "Tanveer Ahmad Fullstack Developer" });
 });
 
 //================ listing ====================================

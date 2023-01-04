@@ -15,7 +15,7 @@ const addTodo = async (req, res) => {
   res.status(200).send(todo);
 };
 
-// No. 2 (Fetching All Todos)....
+// No. 2 (Fetching All Todos).... FOR DMIN NLY....
 const getTodos = async (req, res) => {
   const allTodos = await Todo.findAll({
     order: [["stateIndex", "ASC"]],
