@@ -32,6 +32,8 @@ const loginUser = async (req, res) => {
     return res.status(201).send({ message: "Wrong Email or Password" });
   else if (userWitEmail.password !== password)
     return res.status(201).send({ message: "Wrong Email or Password" });
+  else if (userWitEmail === null)
+    return res.status(201).send({ message: "Fields are empty" });
   else {
     const jwtToken = jwt.sign(
       { id: userWitEmail.id, email: userWitEmail.email },
